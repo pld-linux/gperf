@@ -2,10 +2,11 @@ Summary:	A perfect hash function generator
 Name:		gperf
 Version:	2.7
 Release:	6
-Copyright:	GPL
+License:	GPL
 Group:		Development/Tools
+Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
-Source:		ftp://prep.ai.mit.edu/pub/gnu/gperf/%{name}-%{version}.tar.gz
+Source0:	ftp://prep.ai.mit.edu/pub/gnu/gperf/%{name}-%{version}.tar.gz
 Patch0:		gperf-egcs.patch
 Patch1:		gperf-DESTDIR.patch
 Patch2:		gperf-info.patch
@@ -14,18 +15,19 @@ BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Gperf is a perfect hash function generator written in C++. Simply stated, a
-perfect hash function is a hash function and a data structure that allows
-recognition of a key word in a set of words using exactly one probe into the
-data structure.
+Gperf is a perfect hash function generator written in C++. Simply
+stated, a perfect hash function is a hash function and a data
+structure that allows recognition of a key word in a set of words
+using exactly one probe into the data structure.
 
 %description -l pl
-Gperf jest napisanym w C+++ generatorem doskona³ych funkcji haszujacych.
-Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz struktura danych,
-pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów wykorzystuj±c dok³adnie 
-jedn± próbê.
+Gperf jest napisanym w C+++ generatorem doskona³ych funkcji
+haszujacych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
+struktura danych, pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów
+wykorzystuj±c dok³adnie jedn± próbê.
 
-Install gperf if you need a program that generates perfect hash functions.
+Install gperf if you need a program that generates perfect hash
+functions.
 
 %prep
 %setup  -q
@@ -43,14 +45,14 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr
+install -d $RPM_BUILD_ROOT%{_prefix}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man1/*} \
 	README NEWS
 
-#strip $RPM_BUILD_ROOT/usr/bin/gperf
+#strip $RPM_BUILD_ROOT%{_bindir}/gperf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
