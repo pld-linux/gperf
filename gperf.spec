@@ -1,4 +1,3 @@
-l# $Revision: 1.4 $, $Date: 1999-09-26 17:44:32 $
 Summary:	A perfect hash function generator
 Name:		gperf
 Version:	2.7
