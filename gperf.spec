@@ -2,7 +2,7 @@ Summary:	A perfect hash function generator
 Summary(pl):	Generator funkcji haszuj±cych
 Name:		gperf
 Version:	2.7.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Group(de):	Entwicklung/Werkzeuge
@@ -26,16 +26,13 @@ haszujacych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
 struktura danych, pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów
 wykorzystuj±c dok³adnie jedn± próbê.
 
-Install gperf if you need a program that generates perfect hash
-functions.
-
 %prep
 %setup  -q
 %patch0 -p1
 %patch1 -p1
 
 %build
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -fno-implicit-templates"
+CXXFLAGS="%{rpmcflags} %{!?debug:-fno-rtti -fno-exceptions -fno-implicit-templates}"
 %configure
 %{__make}
 
