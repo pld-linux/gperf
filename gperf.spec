@@ -11,7 +11,6 @@ Patch1:		gperf-DESTDIR.patch
 Patch2:		gperf-info.patch
 Patch3:		gperf-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
-Prereq:		/usr/sbin/fix-info-dir	
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,10 +56,10 @@ gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man1/*} \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %files
 %defattr(644,root,root,755)
