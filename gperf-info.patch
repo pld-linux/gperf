@@ -1,17 +1,15 @@
-diff -Nru gperf-2.7/doc/gperf.texi gperf-2.7.new/doc/gperf.texi
---- gperf-2.7/doc/gperf.texi	Sun Sep 26 19:47:14 1999
-+++ gperf-2.7.new/doc/gperf.texi	Sun Sep 26 19:51:45 1999
-@@ -5,9 +5,10 @@
+diff -Nru gperf-2.7.2/doc/gperf.texi gperf-2.7.2.new/doc/gperf.texi
+--- gperf-2.7.2/doc/gperf.texi	Tue Sep 26 12:57:05 2000
++++ gperf-2.7.2.new/doc/gperf.texi	Fri Nov  3 00:12:02 2000
+@@ -19,9 +19,9 @@
+ @syncodeindex fn cp
+ @c @synindex pg cp
+ 
+-@dircategory Programming Tools
++@dircategory Programming Tools:
+ @direntry
+-* Gperf: (gperf).                Perfect Hash Function Generator.
++* Gperf: (gperf).			Perfect Hash Function Generator
+ @end direntry
  
  @ifinfo
- @format
--START-INFO-DIR-ENTRY
--* Gperf: (gperf).                Perfect Hash Function Generator.
--END-INFO-DIR-ENTRY
-+@dircategory Miscellaneous:
-+@direntry
-+* Gperf: (gperf).			Perfect Hash Function Generator
-+@end direntry
- @end format
- @end ifinfo
- 

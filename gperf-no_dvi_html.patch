@@ -1,7 +1,7 @@
-diff -Nru gperf-2.7/doc/Makefile.in gperf-2.7.new/doc/Makefile.in
---- gperf-2.7/doc/Makefile.in	Sun Sep 26 19:54:48 1999
-+++ gperf-2.7.new/doc/Makefile.in	Sun Sep 26 19:55:41 1999
-@@ -55,7 +55,7 @@
+diff -Nru gperf-2.7.2/doc/Makefile.in gperf-2.7.2.new/doc/Makefile.in
+--- gperf-2.7.2/doc/Makefile.in	Tue Sep 26 13:32:31 2000
++++ gperf-2.7.2.new/doc/Makefile.in	Fri Nov  3 00:13:45 2000
+@@ -59,7 +59,7 @@
  
  VPATH = $(srcdir)
  
@@ -10,25 +10,30 @@ diff -Nru gperf-2.7/doc/Makefile.in gperf-2.7.new/doc/Makefile.in
  
  
  info : $(srcdir)/gperf.info
-@@ -91,21 +91,15 @@
- install : all force installdirs
- 	$(INSTALL_DATA) $(srcdir)/gperf.info $(DESTDIR)$(infodir)/gperf.info
- 	$(INSTALL_DATA) $(srcdir)/gperf.1 $(DESTDIR)$(man1dir)/gperf.1
--	$(INSTALL_DATA) $(srcdir)/gperf.dvi $(DESTDIR)$(dvidir)/gperf.dvi
+@@ -101,22 +101,22 @@
+ #	$(INSTALL_DATA) $(srcdir)/gperf.dvi $(DESTDIR)$(dvidir)/gperf.dvi
+ #	$(MKINSTALLDIRS) $(DESTDIR)$(psdir)
+ #	$(INSTALL_DATA) $(srcdir)/gperf.ps $(DESTDIR)$(dvidir)/gperf.ps
+-	$(MKINSTALLDIRS) $(DESTDIR)$(htmldir)
 -	$(INSTALL_DATA) $(srcdir)/gperf.html $(DESTDIR)$(htmldir)/gperf.html
++#	$(MKINSTALLDIRS) $(DESTDIR)$(htmldir)
++#	$(INSTALL_DATA) $(srcdir)/gperf.html $(DESTDIR)$(htmldir)/gperf.html
  
  installdirs : force
- 	if [ ! -d $(DESTDIR)$(infodir) ] ; then mkdir -p $(DESTDIR)$(infodir) ; fi
- 	if [ ! -d $(DESTDIR)$(mandir) ] ; then mkdir -p $(DESTDIR)$(mandir) ; fi
- 	if [ ! -d $(DESTDIR)$(man1dir) ] ; then mkdir -p $(DESTDIR)$(man1dir) ; fi
--	if [ ! -d $(DESTDIR)$(dvidir) ] ; then mkdir -p $(DESTDIR)$(dvidir) ; fi
--	if [ ! -d $(DESTDIR)$(htmldir) ] ; then mkdir -p $(DESTDIR)$(htmldir) ; fi
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(man1dir)
+ #	$(MKINSTALLDIRS) $(DESTDIR)$(dvidir)
+ #	$(MKINSTALLDIRS) $(DESTDIR)$(psdir)
+-	$(MKINSTALLDIRS) $(DESTDIR)$(htmldir)
++#	$(MKINSTALLDIRS) $(DESTDIR)$(htmldir)
  
  uninstall : force
- 	$(RM) $(infodir)/gperf.info
- 	$(RM) $(man1dir)/gperf.1
--	$(RM) $(dvidir)/gperf.dvi
--	$(RM) $(htmldir)/gperf.html
+ 	$(RM) $(DESTDIR)$(infodir)/gperf.info
+ 	$(RM) $(DESTDIR)$(man1dir)/gperf.1
+ #	$(RM) $(DESTDIR)$(dvidir)/gperf.dvi
+ #	$(RM) $(DESTDIR)$(psdir)/gperf.ps
+-	$(RM) $(DESTDIR)$(htmldir)/gperf.html
++#	$(RM) $(DESTDIR)$(htmldir)/gperf.html
  
  check : all
  
