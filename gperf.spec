@@ -20,6 +20,12 @@ perfect hash function is a hash function and a data structure that allows
 recognition of a key word in a set of words using exactly one probe into the
 data structure.
 
+%description -l pl
+Gperf jest napisanym w C+++ generatorem doskona³ych funkcji haszujacych.
+Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz struktura danych,
+pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów wykorzystuj±c dok³adnie 
+jedn± próbê.
+
 Install gperf if you need a program that generates perfect hash functions.
 
 %prep
