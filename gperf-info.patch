@@ -1,0 +1,17 @@
+diff -Nru gperf-2.7/doc/gperf.texi gperf-2.7.new/doc/gperf.texi
+--- gperf-2.7/doc/gperf.texi	Sun Sep 26 19:47:14 1999
++++ gperf-2.7.new/doc/gperf.texi	Sun Sep 26 19:51:45 1999
+@@ -5,9 +5,10 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Gperf: (gperf).                Perfect Hash Function Generator.
+-END-INFO-DIR-ENTRY
++@dircategory Miscellaneous:
++@direntry
++* Gperf: (gperf).			Perfect Hash Function Generator
++@end direntry
+ @end format
+ @end ifinfo
+ 
