@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Development/Tools
 Source0:	ftp://ftp.gnu.org/pub/gnu/gperf/%{name}-%{version}.tar.gz
+# Source0-md5:	e501acc2e18eed2c8f25ca0ac2330d68
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
