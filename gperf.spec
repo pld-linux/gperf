@@ -20,8 +20,8 @@ using exactly one probe into the data structure.
 
 %description -l pl
 Gperf jest napisanym w C++ generatorem doskona³ych funkcji
-haszujacych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
-struktura danych, pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów
+haszuj±cych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
+struktura danych, pozwalaj±ca rozpoznaæ s³owo kluczowe w zbiorze s³ów
 wykorzystuj±c dok³adnie jedn± próbê.
 
 %prep
