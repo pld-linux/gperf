@@ -33,7 +33,7 @@ wykorzystuj±c dok³adnie jedn± próbê.
 
 %build
 CXXFLAGS="%{rpmcflags} %{!?debug:-fno-rtti -fno-exceptions -fno-implicit-templates}"
-%configure
+%configure2_13
 %{__make}
 
 %install
