@@ -1,7 +1,7 @@
 Summary: A perfect hash function generator.
 Name: gperf
 Version: 2.7
-Release: 5
+Release: 6
 Copyright: GPL
 Source: ftp://prep.ai.mit.edu/pub/gnu/gperf-2.7.tar.gz
 Patch0: gperf-2.7-egcs.patch
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %post
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
-%preun
+%postun
 /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %files
