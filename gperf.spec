@@ -5,7 +5,7 @@ Version:	2.7.2
 Release:	3
 License:	GPL
 Group:		Development/Tools
-Source0:	ftp://prep.ai.mit.edu/pub/gnu/gperf/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnu.org/pub/gnu/gperf/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
@@ -18,7 +18,7 @@ structure that allows recognition of a key word in a set of words
 using exactly one probe into the data structure.
 
 %description -l pl
-Gperf jest napisanym w C+++ generatorem doskona³ych funkcji
+Gperf jest napisanym w C++ generatorem doskona³ych funkcji
 haszujacych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
 struktura danych, pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów
 wykorzystuj±c dok³adnie jedn± próbê.
