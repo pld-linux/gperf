@@ -38,8 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README NEWS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -51,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README NEWS
 %attr(755,root,root) %{_bindir}/gperf
 %{_mandir}/man1/gperf.1*
 %{_infodir}/gperf.info*
