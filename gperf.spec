@@ -12,7 +12,7 @@ Patch2:		gperf-info.patch
 Patch3:		gperf-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
 Prereq:		/usr/sbin/fix-info-dir	
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Gperf is a perfect hash function generator written in C++. Simply stated, a
