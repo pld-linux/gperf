@@ -1,0 +1,34 @@
+diff -Nru gperf-2.7/doc/Makefile.in gperf-2.7.new/doc/Makefile.in
+--- gperf-2.7/doc/Makefile.in	Sun Sep 26 19:54:48 1999
++++ gperf-2.7.new/doc/Makefile.in	Sun Sep 26 19:55:41 1999
+@@ -55,7 +55,7 @@
+ 
+ VPATH = $(srcdir)
+ 
+-all : info dvi ps html
++all : info
+ 
+ 
+ info : $(srcdir)/gperf.info
+@@ -91,21 +91,15 @@
+ install : all force installdirs
+ 	$(INSTALL_DATA) $(srcdir)/gperf.info $(DESTDIR)$(infodir)/gperf.info
+ 	$(INSTALL_DATA) $(srcdir)/gperf.1 $(DESTDIR)$(man1dir)/gperf.1
+-	$(INSTALL_DATA) $(srcdir)/gperf.dvi $(DESTDIR)$(dvidir)/gperf.dvi
+-	$(INSTALL_DATA) $(srcdir)/gperf.html $(DESTDIR)$(htmldir)/gperf.html
+ 
+ installdirs : force
+ 	if [ ! -d $(DESTDIR)$(infodir) ] ; then mkdir -p $(DESTDIR)$(infodir) ; fi
+ 	if [ ! -d $(DESTDIR)$(mandir) ] ; then mkdir -p $(DESTDIR)$(mandir) ; fi
+ 	if [ ! -d $(DESTDIR)$(man1dir) ] ; then mkdir -p $(DESTDIR)$(man1dir) ; fi
+-	if [ ! -d $(DESTDIR)$(dvidir) ] ; then mkdir -p $(DESTDIR)$(dvidir) ; fi
+-	if [ ! -d $(DESTDIR)$(htmldir) ] ; then mkdir -p $(DESTDIR)$(htmldir) ; fi
+ 
+ uninstall : force
+ 	$(RM) $(infodir)/gperf.info
+ 	$(RM) $(man1dir)/gperf.1
+-	$(RM) $(dvidir)/gperf.dvi
+-	$(RM) $(htmldir)/gperf.html
+ 
+ check : all
+ 
