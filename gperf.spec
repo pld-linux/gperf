@@ -1,16 +1,15 @@
 Summary:	A perfect hash function generator
 Name:		gperf
-Version:	2.7
-Release:	7
+Version:	2.7.2
+Release:	1
 License:	GPL
 Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://prep.ai.mit.edu/pub/gnu/gperf/%{name}-%{version}.tar.gz
-Patch0:		gperf-egcs.patch
-Patch1:		gperf-DESTDIR.patch
-Patch2:		gperf-info.patch
-Patch3:		gperf-no_dvi_html.patch
+Patch0:		%{name}-info.patch
+Patch1:		%{name}-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,26 +32,18 @@ functions.
 %setup  -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
 CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
-LDFLAGS="-s"
-export CXXFLAGS LDFLAGS
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man1/*} \
-	README NEWS
-
-#strip $RPM_BUILD_ROOT%{_bindir}/gperf
+gzip -9nf README NEWS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
