@@ -1,16 +1,13 @@
 Summary:	A perfect hash function generator
+Summary(pl):	Generator funkcji haszuj±cych
 Name:		gperf
-Version:	2.7
-Release:	7
+Version:	2.7.2
+Release:	3
 License:	GPL
 Group:		Development/Tools
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://prep.ai.mit.edu/pub/gnu/gperf/%{name}-%{version}.tar.gz
-Patch0:		gperf-egcs.patch
-Patch1:		gperf-DESTDIR.patch
-Patch2:		gperf-info.patch
-Patch3:		gperf-no_dvi_html.patch
+Patch0:		%{name}-info.patch
+Patch1:		%{name}-no_dvi_html.patch
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,33 +23,20 @@ haszujacych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
 struktura danych, pozwalaj±ca rozpoznac s³owo kluczowe w zbiorze s³ów
 wykorzystuj±c dok³adnie jedn± próbê.
 
-Install gperf if you need a program that generates perfect hash
-functions.
-
 %prep
 %setup  -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
-CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
-LDFLAGS="-s"
-export CXXFLAGS LDFLAGS
-%configure
+CXXFLAGS="%{rpmcflags} %{!?debug:-fno-rtti -fno-exceptions -fno-implicit-templates}"
+%configure2_13
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-gzip -9nf $RPM_BUILD_ROOT{%{_infodir}/*,%{_mandir}/man1/*} \
-	README NEWS
-
-#strip $RPM_BUILD_ROOT%{_bindir}/gperf
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README NEWS
 %attr(755,root,root) %{_bindir}/gperf
 %{_mandir}/man1/gperf.1*
 %{_infodir}/gperf.info*
