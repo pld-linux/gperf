@@ -1,7 +1,7 @@
 Summary:	A perfect hash function generator
 Name:		gperf
 Version:	2.7
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Tools
 Group(fr):	Development/Outils
