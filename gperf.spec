@@ -6,7 +6,7 @@ Copyright: GPL
 Source: ftp://prep.ai.mit.edu/pub/gnu/gperf-2.7.tar.gz
 Patch0: gperf-2.7-egcs.patch
 Group: Development/Tools
-Prereq: /sbin/install-info
+Prereq:		/usr/sbin/fix-info-dir	
 BuildRoot: /var/tmp/gperf-root
 
 %description
@@ -39,12 +39,10 @@ strip $RPM_BUILD_ROOT/usr/bin/gperf
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/sbin/install-info /usr/info/gperf.info.gz /usr/info/dir
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %preun
-if [ $1 = 0 ]; then
-   /sbin/install-info --delete /usr/info/gperf.info.gz /usr/info/dir
-fi
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %files
 %defattr(-,root,root)
