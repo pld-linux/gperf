@@ -1,4 +1,5 @@
 Summary:	A perfect hash function generator
+Summary(pl):	Generator funkcji haszuj±cych
 Name:		gperf
 Version:	2.7.2
 Release:	1
@@ -34,7 +35,7 @@ functions.
 %patch1 -p1
 
 %build
-CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -fno-implicit-templates"
 %configure
 %{__make}
 
