@@ -4,7 +4,7 @@
  
  VPATH = $(srcdir)
  
--all : info dvi ps pdf html
+-all : info ps pdf html
 +all : info
  
  
