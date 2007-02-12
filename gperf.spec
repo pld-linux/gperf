@@ -1,5 +1,5 @@
 Summary:	A perfect hash function generator
-Summary(pl):	Generator funkcji haszuj±cych
+Summary(pl.UTF-8):   Generator funkcji haszujÄ…cych
 Name:		gperf
 Version:	3.0.2
 Release:	1
@@ -19,11 +19,11 @@ stated, a perfect hash function is a hash function and a data
 structure that allows recognition of a key word in a set of words
 using exactly one probe into the data structure.
 
-%description -l pl
-Gperf jest napisanym w C++ generatorem doskona³ych funkcji
-haszuj±cych. Doskona³a funkcja haszuj±ca to funkcja haszuj±ca oraz
-struktura danych, pozwalaj±ca rozpoznaæ s³owo kluczowe w zbiorze s³ów
-wykorzystuj±c dok³adnie jedn± próbê.
+%description -l pl.UTF-8
+Gperf jest napisanym w C++ generatorem doskonaÅ‚ych funkcji
+haszujÄ…cych. DoskonaÅ‚a funkcja haszujÄ…ca to funkcja haszujÄ…ca oraz
+struktura danych, pozwalajÄ…ca rozpoznaÄ‡ sÅ‚owo kluczowe w zbiorze sÅ‚Ã³w
+wykorzystujÄ…c dokÅ‚adnie jednÄ… prÃ³bÄ™.
 
 %prep
 %setup -q
