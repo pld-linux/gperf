@@ -1,5 +1,5 @@
 Summary:	A perfect hash function generator
-Summary(pl.UTF-8):   Generator funkcji haszujących
+Summary(pl.UTF-8):	Generator funkcji haszujących
 Name:		gperf
 Version:	3.0.2
 Release:	1
