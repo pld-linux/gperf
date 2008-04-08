@@ -5,7 +5,7 @@ Version:	3.0.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	ftp://ftp.gnu.org/gnu/gperf/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnu.org/gnu/gperf/%{name}-%{version}.tar.gz
 # Source0-md5:	cc20e58975a38075440423c8fb85fd00
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_dvi_html.patch
