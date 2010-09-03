@@ -1,14 +1,15 @@
 Summary:	A perfect hash function generator
 Summary(pl.UTF-8):	Generator funkcji haszujących
 Name:		gperf
-Version:	3.0.3
+Version:	3.0.4
 Release:	1
-License:	GPL
+License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/gperf/%{name}-%{version}.tar.gz
-# Source0-md5:	cc20e58975a38075440423c8fb85fd00
+# Source0-md5:	c1f1db32fb6598d6a93e6e88796a8632
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_dvi_html.patch
+URL:		http://www.gnu.org/software/gperf/
 BuildRequires:	libstdc++-devel
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,10 +45,10 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
