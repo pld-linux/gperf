@@ -12,3 +12,12 @@
  @end direntry
  @end ifinfo
  
+@@ -1128,7 +1128,7 @@
+ use of two hash tables in the same file, even when the option @samp{-G}
+ (or, equivalently, the @samp{%global-table} declaration) is given.
+ 
+-@itemx --length-table-name=@var{length-table-array-name}
++@item --length-table-name=@var{length-table-array-name}
+ @cindex Array name
+ Allows you to specify the name for the generated array containing the
+ length table.  Default name is @samp{lengthtable}.  This option permits the
