@@ -2,7 +2,7 @@ Summary:	A perfect hash function generator
 Summary(pl.UTF-8):	Generator funkcji haszujących
 Name:		gperf
 Version:	3.0.4
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/gperf/%{name}-%{version}.tar.gz
