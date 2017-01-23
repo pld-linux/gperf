@@ -1,5 +1,5 @@
---- gperf-3.0.4/doc/gperf.texi.orig	2009-02-01 13:12:22.000000000 +0100
-+++ gperf-3.0.4/doc/gperf.texi	2010-09-03 19:46:25.082531741 +0200
+--- gperf-3.1/doc/gperf.texi.orig	2009-02-01 13:12:22.000000000 +0100
++++ gperf-3.1/doc/gperf.texi	2010-09-03 19:46:25.082531741 +0200
 @@ -30,9 +30,9 @@
  @c @synindex pg cp
  
@@ -12,12 +12,3 @@
  @end direntry
  @end ifinfo
  
-@@ -1128,7 +1128,7 @@
- use of two hash tables in the same file, even when the option @samp{-G}
- (or, equivalently, the @samp{%global-table} declaration) is given.
- 
--@itemx --length-table-name=@var{length-table-array-name}
-+@item --length-table-name=@var{length-table-array-name}
- @cindex Array name
- Allows you to specify the name for the generated array containing the
- length table.  Default name is @samp{lengthtable}.  This option permits the

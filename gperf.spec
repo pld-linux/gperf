@@ -1,12 +1,12 @@
 Summary:	A perfect hash function generator
 Summary(pl.UTF-8):	Generator funkcji haszujących
 Name:		gperf
-Version:	3.0.4
-Release:	2
+Version:	3.1
+Release:	1
 License:	GPL v3+
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/gperf/%{name}-%{version}.tar.gz
-# Source0-md5:	c1f1db32fb6598d6a93e6e88796a8632
+# Source0-md5:	9e251c0a618ad0824b51117d5d9db87e
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-no_dvi_html.patch
 URL:		http://www.gnu.org/software/gperf/

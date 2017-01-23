@@ -1,15 +1,15 @@
---- gperf-3.0.1/doc/Makefile.in.orig	2003-06-02 13:42:02.000000000 +0200
-+++ gperf-3.0.1/doc/Makefile.in	2003-10-14 00:53:19.827335328 +0200
+--- gperf-3.1/doc/Makefile.in.orig	2017-01-02 12:35:39.000000000 +0100
++++ gperf-3.1/doc/Makefile.in	2017-01-23 21:51:44.042712664 +0100
 @@ -64,7 +64,7 @@
  
  VPATH = $(srcdir)
  
--all : info ps pdf html
-+all : info
+-all : info pdf html man
++all : info man
  
  
  info : $(srcdir)/gperf.info
-@@ -116,8 +116,8 @@
+@@ -130,8 +130,8 @@
  #	$(INSTALL_DATA) $(srcdir)/gperf.ps $(DESTDIR)$(psdir)/gperf.ps
  #	$(MKINSTALLDIRS) $(DESTDIR)$(pdfdir)
  #	$(INSTALL_DATA) $(srcdir)/gperf.pdf $(DESTDIR)$(pdfdir)/gperf.pdf
@@ -20,7 +20,7 @@
  
  installdirs : force
  	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
-@@ -125,7 +125,7 @@
+@@ -139,7 +139,7 @@
  #	$(MKINSTALLDIRS) $(DESTDIR)$(dvidir)
  #	$(MKINSTALLDIRS) $(DESTDIR)$(psdir)
  #	$(MKINSTALLDIRS) $(DESTDIR)$(pdfdir)
@@ -29,7 +29,7 @@
  
  uninstall : force
  	$(RM) $(DESTDIR)$(infodir)/gperf.info
-@@ -133,7 +133,7 @@
+@@ -147,7 +147,7 @@
  #	$(RM) $(DESTDIR)$(dvidir)/gperf.dvi
  #	$(RM) $(DESTDIR)$(psdir)/gperf.ps
  #	$(RM) $(DESTDIR)$(pdfdir)/gperf.pdf
